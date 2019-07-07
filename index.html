@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unlock</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Body -->
+    <div class="container box">
+        <div class="card">
+            <h3 class="card-header">Unlock</h3>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col text-center">
+                        <div class="passcode">
+                            <h4>Enter Passcode</h4>
+                            <div class="input-group mb-3">
+                                <input class="form-control text-center" id="pin1" aria-label="pin-1" type="text"
+                                    maxlength="1">
+                                <input class="form-control text-center" id="pin2" aria-label="pin-2" type="text"
+                                    maxlength="1">
+                                <input class="form-control text-center" id="pin3" aria-label="pin-3" type="text"
+                                    maxlength="1">
+                                <input class="form-control text-center" id="pin4" aria-label="pin-4" type="text"
+                                    maxlength="1">
+                            </div>
+                            <h5 id="error_msg" class="text-danger"></h5>
+                            <h5 id="success_msg" class="text-success"></h5>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <!-- keypad -->
+                        <div class="keypad">
+                            <div class="my-2">
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('1')">1</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('2')">2</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('3')">3</button>
+                            </div>
+                            <div class="my-2">
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('4')">4</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('5')">5</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('6')">6</button>
+                            </div>
+                            <div class="my-2">
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('7')">7</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('8')">8</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('9')">9</button>
+                            </div>
+                            <div class="my-2">
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="clear_pin()">*</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="press_pin('0')">0</button>
+                                <button type="button" class="btn btn-outline-secondary p-4"
+                                    onclick="enter_pin()">#</button>
+                            </div>
+                        </div>
+                        <!-- how to use -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#howtouse">
+                            How to use ?
+                        </button>
+                        <div class="modal fade" id="howtouse" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="howtouseTitle">How to use ?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Press 'number' key to enter passcode</li>
+                                            <li class="list-group-item">Press '*' key to clear passcode</li>
+                                            <li class="list-group-item">Press '#' key to confirm passcode</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Script -->
+        <script src="js/pincode.js">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
